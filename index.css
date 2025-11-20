@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav-bar */
+
+nav{
+    background-color: #33333300;
+    color:white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-name{
+    font-size: x-large;
+    font-weight: bold;
+}
+.nav-link.active{
+    color:blueviolet;
+    font-weight: bold;
+}
+.navlink ul{
+    display: flex;
+    list-style-type: none;
+}
+.navlink a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    transition: color 0.3s;
+}
+.navlink a:hover{
+    color:blueviolet;
+}
+#menu-toggle{
+    display: none;
+    font-size: medium;
+    cursor: pointer;
+}
+
+/* background */
+
+#bg-video{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/*Row-1 */
+
+.row1{
+    padding-top: 250px;
+}
+
+/*Row-2*/
+
+#row2{
+    padding-top: 400px;
+    padding-bottom: 150px;
+}
+.tech-card img{
+    width: 100px;
+    height: 100px;
+}
+#about{
+    padding-bottom: 100px;
+}
+.about_con{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+/*Row-3*/
+
+#row3{
+    padding-bottom: 50px;
+}
+#edu{
+    padding-bottom: 50px;
+}
+.education-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    align-items: center;
+}
+
+/*Row-4*/
+
+.row4{
+    padding-bottom: 150px;
+}
+#skills{
+    padding-bottom: 50px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+
+/*Row-5*/
+
+#row5{
+    padding-bottom: 200px;
+}
+#projects{
+    padding-bottom: 70px;
+}
+#slide{
+    height: 580px;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0.5);
+}
+
+/*Row-6*/
+
+.size{
+    width: 460px;
+    background-color: rgb(33, 5, 71);
+    color: white;
+    margin-bottom: 10px;
+}
+#sub{
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color:transparent;
+    border:2px solid black;
+    border-radius: 30px 30px;
+    color:white;
+    box-shadow: 0px 2px 8px blueviolet;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s;
+    transform: translateY(-4px);    
+}
+#sub:hover{
+    box-shadow:none;
+    transform: translateY(0px);
+    border: 1px solid gray;
+}
+#btn{
+    text-align: center;
+}
+#form{
+    justify-items: center;
+}
+
+/*foot*/
+
+#foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+#nav a{
+    text-decoration:none;
+    color: white;
+}
+#nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.icons a{
+    padding: 10px;
+}
+#c-3{
+  display: flex;
+  flex-direction: column;
+}
+#c-3 a{
+  color: white;
+  text-decoration: none;
+}
+
+/*copy*/
+
+.copy{
+  max-width:100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#right,#left{
+    color: white;
+}
+#left a{
+  color: white;
+  text-decoration: none;
+}
+
+/* responsive */
+
+@media (max-width:750px) {
+    #menu-toggle{
+        display: block;
+    }
+    .navlink a{
+        display: none;
+    }
+    #navlink li{
+        list-style-type: none;
+    }
+    #navlink a{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+    }
+    #navlink a:hover{
+        color:blueviolet;
+    }
+    #ft{
+        display: flex;
+        flex-direction: column;
+    }
+    .size{
+        width:350px;
+    }
+    #grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .about_con{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+    }
+    .tech-card img{
+        width: 60px;
+        height: 60px;
+    }
+    .education-con{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 150px;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1159px){
+  #ft{
+  text-align: center;
+}
+}
